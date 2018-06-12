@@ -1,0 +1,19 @@
+import { connect } from 'react-redux'
+import Login from '../components/Login.component';
+import { login } from '../actions'
+
+const mapStateToProps = (state) => {
+	console.log("mapStateToProps",state);
+  return {
+		status:state.status
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		onSubmit :(credentials) => dispatch(login(credentials))
+	}
+}
+
+const LoginContainer =  connect(mapStateToProps, mapDispatchToProps)(Login);
+export default LoginContainer

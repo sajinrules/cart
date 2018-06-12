@@ -1,0 +1,39 @@
+
+$primary-color: #31353d; //shark
+$secondary-color:#18bc9c;
+$white: #fff; //shark
+$primary-light : rgba(49, 53, 61,0.5);
+$border: #15a589;
+.fs-14{
+	font-size:14px !important;
+}
+.fs-11{
+	font-size:11px !important;
+}
+.primary{
+	color:$primary-color !important;
+}
+.bgc-primary{
+	background-color:$primary-color !important;
+}
+.secondary{
+	color:$secondary-color !important;
+}
+.bgc-secondary{
+	background-color:$secondary-color !important;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $primary-light !important;
+    @extend .fs-11;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $primary-light !important;
+    @extend .fs-11;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $primary-light !important;
+    @extend .fs-11;
+}
+
