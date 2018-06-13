@@ -5,7 +5,7 @@ import { login } from '../actions'
 const mapStateToProps = (state) => {
 	console.log("mapStateToProps",state);
   return {
-		status:state.status
+		status:state.login.status
   };
 }
 

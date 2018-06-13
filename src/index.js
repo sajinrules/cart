@@ -6,9 +6,8 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware} from 'redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.css';
 import reducers from './reducers'
-import Navbar from './components/Navbar.component';
+import HeaderBar from './components/HeaderBar.component';
 import LoginContainer from './containers/LoginContainer';
 import SampleComponent from './components/SampleComponent';
 import './styles/index.css';
@@ -19,7 +18,7 @@ let store = createStore(reducers,applyMiddleware(thunk))
 ReactDOM.render(
   <Provider store={store}>
     <div>
-    	<Navbar/>
+    	<HeaderBar/>
 	    <Router>
         <div>
           <Route exact path="/" component={LoginContainer} />
