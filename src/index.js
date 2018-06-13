@@ -11,7 +11,7 @@ import reducers from './reducers'
 import Navbar from './components/Navbar.component';
 import LoginContainer from './containers/LoginContainer';
 import SampleComponent from './components/SampleComponent';
-import './styles/index.scss';
+import './styles/index.css';
 const $app = document.getElementById('app')
 
 let store = createStore(reducers,applyMiddleware(thunk))
