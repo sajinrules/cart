@@ -7,8 +7,10 @@ import Cat1 from '../assets/cat1.jpg';
 import Cat2 from '../assets/cat2.jpg';
 import Cat3 from '../assets/cat3.jpg';
 
-class SampleComponent extends React.Component {
-
+class LandingComponent extends React.Component {
+  navigate(path) {
+    this.props.history.push(path);
+  }
   render() {
     return (
       <div className="explore">
@@ -39,22 +41,22 @@ class SampleComponent extends React.Component {
         <Grid>
           <Row className="show-grid mx-0">
             <Col className="category px-0" sm={6} md={3}>
-              <Button>Women</Button>
+              <Button onClick={() => this.navigate('/women') }>Women</Button>
               <Image src={Cat1} thumbnail />
             </Col>
             <Col className="category px-0" sm={6} md={3}>
-              <Button>Men</Button>
+              <Button onClick={() => this.navigate('/men') }>Men</Button>
               <Image src={Cat2} thumbnail />
             </Col>
             <Col className="category px-0" sm={6} md={3}>
-              <Button>Kids</Button>
+              <Button onClick={() => this.navigate('/kids') }>Kids</Button>
               <Image src={Cat3} thumbnail />
             </Col>
             <Col className="category px-0" sm={6} md={3}>
               <div className="sign-up">
                 <h2 className="text-center text-uppercase">Sign up & get 20% off</h2>
                 <div className="text-center">Be the first to know about the latest fashion news and get exclusive offers</div>
-                <Button>Sign up</Button>
+                <Button onClick={() => this.navigate('/login') }>Sign up</Button>
               </div>
             </Col>
           </Row>
@@ -78,4 +80,4 @@ class SampleComponent extends React.Component {
   }
 }
 
-export default SampleComponent
+export default LandingComponent

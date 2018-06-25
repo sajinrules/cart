@@ -9,7 +9,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import reducers from './reducers'
 import HeaderBar from './components/HeaderBar.component';
 import LoginContainer from './containers/LoginContainer';
-import SampleComponent from './components/SampleComponent';
+import LandingComponent from './components/LandingComponent';
+import MensComponent from './components/MensComponent';
+import WomensComponent from './components/WomensComponent';
+import KidsComponent from './components/KidsComponent';
 import './compiled/index.css';
 const $app = document.getElementById('app')
 
@@ -21,7 +24,10 @@ ReactDOM.render(
     	<HeaderBar/>
 	    <Router>
         <div>
-          <Route exact path="/" component={SampleComponent} />
+          <Route exact path="/" component={LandingComponent} />
+          <Route exact path="/men" component={MensComponent} />
+          <Route exact path="/women" component={WomensComponent} />
+          <Route exact path="/kids" component={KidsComponent} />
           <Route path="/login" component={LoginContainer} />
         </div>
 	    </Router>

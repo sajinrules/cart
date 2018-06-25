@@ -26,8 +26,7 @@ class Login extends React.Component {
 	render() {
 		const { username, password } = this.state;
 		return (
-			<div className="">
-			here {this.props.status}
+			<div className="login">
 				<div className="container login-form-wrapper px-0">
 					<form className="login-form" onSubmit={this.login}>
 						<div className="form-group row">
