@@ -1,5 +1,8 @@
 import React from 'react'
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import Logo from '../assets/logo.png';
+import Cart from '../assets/cart.svg';
+import Person from '../assets/person.svg';
 
 export class HeaderBar extends React.Component {
 	render() {
@@ -8,25 +11,35 @@ export class HeaderBar extends React.Component {
 				<Navbar>
 					<Navbar.Header>
 						<Navbar.Brand>
-							<a href="#home">React-Bootstrap</a>
+							<div><img alt="logo" src={Logo}/> <a href="#brand">MyCart</a></div>
 						</Navbar.Brand>
+						<Navbar.Toggle />
 					</Navbar.Header>
-					<Nav>
-						<NavItem eventKey={1} href="#">
-							Link
-						</NavItem>
+					<Navbar.Collapse>
+						<div>
+							<Nav>
+								<NavItem eventKey={1} href="#">
+									Men
+								</NavItem>
+								<NavItem eventKey={2} href="#">
+									Women
+								</NavItem>
+								<NavItem eventKey={2} href="#">
+									Kids
+								</NavItem>
+							</Nav>
+						</div>
+						<Nav pullRight>
 						<NavItem eventKey={2} href="#">
-							Link
+							<img alt="logo" src={Cart}/>
 						</NavItem>
-						<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-							<MenuItem eventKey={3.1}>Action</MenuItem>
-							<MenuItem eventKey={3.2}>Another action</MenuItem>
-							<MenuItem eventKey={3.3}>Something else here</MenuItem>
-							<MenuItem divider />
-							<MenuItem eventKey={3.4}>Separated link</MenuItem>
-						</NavDropdown>
-					</Nav>
-				</Navbar>;
+							<NavItem eventKey={1} href="#">
+								<img alt="logo" src={Person}/>
+							</NavItem>
+
+						</Nav>
+					</Navbar.Collapse>
+				</Navbar>
 			</div>
 		)
 	}

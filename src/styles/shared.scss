@@ -4,6 +4,8 @@ $secondary-color:#18bc9c;
 $white: #fff; //shark
 $primary-light : rgba(49, 53, 61,0.5);
 $border: #15a589;
+$cinnabar:#E74C3C;
+$oldlace:#fdf5e6;
 .fs-14{
 	font-size:14px !important;
 }
@@ -23,17 +25,20 @@ $border: #15a589;
 	background-color:$secondary-color !important;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $primary-light !important;
-    @extend .fs-11;
+	color: $primary-light !important;
+	@extend .fs-11;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $primary-light !important;
-    @extend .fs-11;
+	color: $primary-light !important;
+	@extend .fs-11;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: $primary-light !important;
-    @extend .fs-11;
+	color: $primary-light !important;
+	@extend .fs-11;
 }
 
+.bgc-cinnabar {
+	background-color: $cinnabar;
+}

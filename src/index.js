@@ -10,7 +10,7 @@ import reducers from './reducers'
 import HeaderBar from './components/HeaderBar.component';
 import LoginContainer from './containers/LoginContainer';
 import SampleComponent from './components/SampleComponent';
-import './styles/index.css';
+import './compiled/index.css';
 const $app = document.getElementById('app')
 
 let store = createStore(reducers,applyMiddleware(thunk))
@@ -21,8 +21,8 @@ ReactDOM.render(
     	<HeaderBar/>
 	    <Router>
         <div>
-          <Route exact path="/" component={LoginContainer} />
-          <Route path="/home" component={SampleComponent} />
+          <Route exact path="/" component={SampleComponent} />
+          <Route path="/login" component={LoginContainer} />
         </div>
 	    </Router>
     </div>
