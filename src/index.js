@@ -13,6 +13,7 @@ import LandingComponent from './components/LandingComponent';
 import MensComponent from './components/MensComponent';
 import WomensComponent from './components/WomensComponent';
 import KidsComponent from './components/KidsComponent';
+import Footer from './components/FooterComponent'
 import './compiled/index.css';
 const $app = document.getElementById('app')
 
@@ -31,6 +32,7 @@ ReactDOM.render(
           <Route path="/login" component={LoginContainer} />
         </div>
 	    </Router>
+      <Footer/>
     </div>
   </Provider>,
   $app

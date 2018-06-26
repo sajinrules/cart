@@ -61,20 +61,6 @@ class LandingComponent extends React.Component {
             </Col>
           </Row>
         </Grid>
-        <Navbar className="footer">
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#home">MyCart</a>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-              <Navbar.Text>
-                Signed in as: <Navbar.Link href="#">Sajin Abooabkkar</Navbar.Link>
-              </Navbar.Text>
-              <Navbar.Text pullRight>Contact Us</Navbar.Text>
-          </Navbar.Collapse>
-        </Navbar>
       </div>
     )
   }

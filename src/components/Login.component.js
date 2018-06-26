@@ -27,7 +27,7 @@ class Login extends React.Component {
 		const { username, password } = this.state;
 		return (
 			<div className="login">
-				<div className="container login-form-wrapper px-0">
+				<div className="login-form-wrapper px-0">
 					<form className="login-form" onSubmit={this.login}>
 						<div className="form-group row">
 							<div className="col-12">
@@ -39,7 +39,9 @@ class Login extends React.Component {
 								<input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} placeholder="Password" />
 							</div>
 						</div>
-						<button type="submit" className="btn bgc-primary text-white btn-lg btn-block">Login</button>
+						<div className="form-group row">
+							<button type="submit" className="btn bgc-primary text-white btn-lg btn-block">Login</button>
+						</div>	
 						</form>
 				</div>
 			</div>
