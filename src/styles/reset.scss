@@ -48,28 +48,22 @@ html, body {
   }
 }
 .login {
-  background: url('http://rajasthanfilm.com/admin/gallery/90.jpg') !important;
-  height: calc(100vh - 374px);
+  background: url('https://stealthindustries.net/wp-content/uploads/2016/12/Website-Design-Background-1.jpg') !important;
+  height: calc(100vh - 224px);
 }
 .login-form-wrapper {
-  // div{
-  //   height: 100%;
-  // }
-  // position: absolute;
-  // left: 0;
-  // right: 0;
-  // top: calc(50% - 108px);
-  // bottom: 0;
-  // background-color:$secondary-color !important;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
   h2{
     color:$secondary-color;
   }
-  .login-form{
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 0px 15px;
-  }
+  // .login-form{
+  //   max-width: 500px;
+  //   margin: 0 auto;
+  //   padding: 0px 15px;
+  // }
   .form-control{
     border-color: $border !important;
   }
@@ -138,7 +132,7 @@ html, body {
 .footer {
   background-color: #333 !important;
   color: $white;
-  min-height: 300px;
+  min-height: 150px;
   padding: 50px;
   a{
     color: #ccc !important;

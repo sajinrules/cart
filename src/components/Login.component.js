@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormGroup, FormControl, Checkbox, Radio, ControlLabel, Button,HelpBlock} from 'react-bootstrap';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -25,24 +26,30 @@ class Login extends React.Component {
 
 	render() {
 		const { username, password } = this.state;
+		function FieldGroup({ id, label, help, ...props }) {
+		  return (
+		    <FormGroup controlId={id}>
+		      <FormControl {...props} />
+		      {help && <HelpBlock>{help}</HelpBlock>}
+		    </FormGroup>
+		  );
+		}
 		return (
 			<div className="login">
-				<div className="login-form-wrapper px-0">
-					<form className="login-form" onSubmit={this.login}>
-						<div className="form-group row">
-							<div className="col-12">
-								<input type="text" className="form-control" name="username" value={username} onChange={this.handleChange} placeholder="Username"/>
-							</div>
-						</div>
-						<div className="form-group row">
-							<div className="col-12">
-								<input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} placeholder="Password" />
-							</div>
-						</div>
-						<div className="form-group row">
-							<button type="submit" className="btn bgc-primary text-white btn-lg btn-block">Login</button>
-						</div>	
+				<div className="container login-form-wrapper">
+					<div>Content here</div>
+					<div>
+						<form>
+							<FieldGroup
+								id="formControlsEmail"
+								type="email"
+								label="Email address"
+								placeholder="Enter email"
+							/>
+							<FieldGroup id="formControlsPassword" label="Password" type="password" />
+							<Button type="submit">Submit</Button>
 						</form>
+					</div>
 				</div>
 			</div>
 		)
