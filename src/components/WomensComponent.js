@@ -3,9 +3,9 @@ import React from 'react'
 
 
 class WomenComponent extends React.Component {
-  constructor(props) {
-      super(props)
-  }
+  // constructor(props) {
+  //     super(props)
+  // }
 
   render() {
     return (

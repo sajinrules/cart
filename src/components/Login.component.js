@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, FormControl, Checkbox, Radio, ControlLabel, Button,HelpBlock} from 'react-bootstrap';
+import { FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -13,15 +13,13 @@ class Login extends React.Component {
 	}
 
 	handleChange(e){
-		console.log("e:",e.target);
     const { name, value } = e.target;
-		debugger
+		//debugger
     this.setState({ [name]: value });
   }
 
   login(event){
 	  event.preventDefault();
-	  console.log("this.props:",this.props);
 		console.log("this.setState:",this.state);
 		//console.log("LoginAPI:",LoginAPI);
 	  this.props.onSubmit(this.state)
@@ -40,7 +38,7 @@ class Login extends React.Component {
 							<h1>Log in to get exciting offers</h1>
 						</div>
 						<div className="flex-1">
-						<form onSubmit={this.handleSubmit}>
+						<form onSubmit={this.login}>
 							<FormGroup controlId="usename" bsSize="large">
 								<ControlLabel>Usename</ControlLabel>
 								<FormControl
@@ -62,12 +60,13 @@ class Login extends React.Component {
 								/>
 							</FormGroup>
 
-							<Button bsSize="large" disabled={!this.validateForm()} type="submit">Login
+							<Button bsSize="large" type="submit">Login
 							</Button>
 							</form>
 						</div>
 					</div>
 				</div>
+				<div>overly</div>
 			</div>
 		)
 	}

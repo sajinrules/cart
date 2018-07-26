@@ -1,5 +1,5 @@
 import React from 'react'
-import { Carousel, Grid, Row, Col, Image,Button,Navbar } from 'react-bootstrap';
+import { Carousel, Grid, Row, Col, Image,Button } from 'react-bootstrap';
 import Img1 from '../assets/img1.jpg';
 import Img2 from '../assets/img2.jpg';
 import Img3 from '../assets/img3.jpg';
@@ -56,7 +56,7 @@ class LandingComponent extends React.Component {
               <div className="sign-up">
                 <h2 className="text-center text-uppercase">Sign up & get 20% off</h2>
                 <div className="text-center">Be the first to know about the latest fashion news and get exclusive offers</div>
-                <Button onClick={() => this.navigate('/login') }>Sign up</Button>
+                <Button onClick={() => this.navigate('/login') }>Sign In</Button>
               </div>
             </Col>
           </Row>
