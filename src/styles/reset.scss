@@ -48,8 +48,27 @@ html, body {
   }
 }
 .login {
-  background: url('https://stealthindustries.net/wp-content/uploads/2016/12/Website-Design-Background-1.jpg') !important;
+  background: url('../assets/bg3.jpg') !important;
   height: calc(100vh - 224px);
+  .content-wrapper {
+    @extend .login-form-wrapper;
+    width: 100%;
+    .flex-1 {
+      flex: 1;
+      padding: 0 10px;
+    }
+    h1{
+      color: $white;
+    }
+  }
+  form {
+    button {
+      background-color: $cinnabar;
+      border: none;
+      color: $white;
+    }
+  }
+
 }
 .login-form-wrapper {
   display: flex;
@@ -65,7 +84,7 @@ html, body {
   //   padding: 0px 15px;
   // }
   .form-control{
-    border-color: $border !important;
+    border-color: $gainsboro !important;
   }
 }
 .explore{
@@ -136,5 +155,8 @@ html, body {
   padding: 50px;
   a{
     color: #ccc !important;
+  }
+  .container {
+    width: auto !important;
   }
 }

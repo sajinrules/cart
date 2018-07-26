@@ -5,6 +5,9 @@ import Cart from '../assets/cart.svg';
 import Person from '../assets/person.svg';
 
 export class HeaderBar extends React.Component {
+	navigate(path) {
+    this.props.history.push(path);
+  }
 	render() {
 		return (
 			<div className="">
@@ -18,13 +21,13 @@ export class HeaderBar extends React.Component {
 					<Navbar.Collapse>
 						<div>
 							<Nav>
-								<NavItem eventKey={1} href="#">
+								<NavItem onClick={() => this.navigate('/men') } eventKey={1} href="#">
 									Men
 								</NavItem>
-								<NavItem eventKey={2} href="#">
+								<NavItem onClick={() => this.navigate('/women') } eventKey={2} href="#">
 									Women
 								</NavItem>
-								<NavItem eventKey={2} href="#">
+								<NavItem onClick={() => this.navigate('/kids') } eventKey={2} href="#">
 									Kids
 								</NavItem>
 							</Nav>
