@@ -22,9 +22,10 @@ let store = createStore(reducers,applyMiddleware(thunk))
 ReactDOM.render(
   <Provider store={store}>
     <div>
-    	<HeaderBar/>
+
 	    <Router>
         <div>
+          <HeaderBar {...this.props}/>
           <Route exact path="/" component={LandingComponent} />
           <Route exact path="/men" component={MensComponent} />
           <Route exact path="/women" component={WomensComponent} />

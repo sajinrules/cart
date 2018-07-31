@@ -9,7 +9,9 @@ class WomenComponent extends React.Component {
 
   render() {
     return (
-      <h3>Women</h3>
+      <div className="content container">
+				<h3>Women</h3>
+			</div>
     )
   }
 }

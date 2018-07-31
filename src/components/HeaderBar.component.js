@@ -3,43 +3,42 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import Logo from '../assets/logo.png';
 import Cart from '../assets/cart.svg';
 import Person from '../assets/person.svg';
+import { Link } from 'react-router-dom';
+import { ProfileComponent } from './Profile.component'
 
 export class HeaderBar extends React.Component {
-	navigate(path) {
-    this.props.history.push(path);
-  }
 	render() {
 		return (
 			<div className="">
 				<Navbar>
 					<Navbar.Header>
 						<Navbar.Brand>
-							<div><img alt="logo" src={Logo}/> <a href="#brand">MyCart</a></div>
+							<div><img alt="logo" src={Logo}/> <Link to="/">MyCart</Link></div>
 						</Navbar.Brand>
 						<Navbar.Toggle />
 					</Navbar.Header>
 					<Navbar.Collapse>
 						<div>
 							<Nav>
-								<NavItem onClick={() => this.navigate('/men') } eventKey={1} href="#">
+								<NavItem componentClass={Link} href="/men" to="/men">
 									Men
 								</NavItem>
-								<NavItem onClick={() => this.navigate('/women') } eventKey={2} href="#">
+								<NavItem componentClass={Link} href="/women" to="/women">
 									Women
 								</NavItem>
-								<NavItem onClick={() => this.navigate('/kids') } eventKey={2} href="#">
+								<NavItem componentClass={Link} href="/kids" to="/kids">
 									Kids
 								</NavItem>
 							</Nav>
 						</div>
 						<Nav pullRight>
-						<NavItem eventKey={2} href="#">
-							<img alt="logo" src={Cart}/>
-						</NavItem>
+							<NavItem eventKey={2} href="#">
+								<img alt="logo" src={Cart}/>
+							<ProfileComponent></ProfileComponent>
+							</NavItem>
 							<NavItem eventKey={1} href="#">
 								<img alt="logo" src={Person}/>
 							</NavItem>
-
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>

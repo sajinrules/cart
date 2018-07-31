@@ -9,7 +9,10 @@ class KidsComponent extends React.Component {
 
 	render() {
 		return (
-			<h3>Kids</h3>
+			<div className="content container">
+				<h3>Kids</h3>
+			</div>
+
 		)
 	}
 }
