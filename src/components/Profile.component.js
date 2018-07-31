@@ -27,7 +27,6 @@ export class ProfileComponent extends React.Component {
       </NavItem>*/}
       <NavItem eventKey={2} href="#">
         <img alt="logo" src={Cart}/>
-      <ProfileComponent></ProfileComponent>
       </NavItem>
     </OverlayTrigger>
 

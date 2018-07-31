@@ -32,10 +32,7 @@ export class HeaderBar extends React.Component {
 							</Nav>
 						</div>
 						<Nav pullRight>
-							<NavItem eventKey={2} href="#">
-								<img alt="logo" src={Cart}/>
 							<ProfileComponent></ProfileComponent>
-							</NavItem>
 							<NavItem eventKey={1} href="#">
 								<img alt="logo" src={Person}/>
 							</NavItem>
