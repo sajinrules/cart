@@ -1,9 +1,8 @@
 import { connect } from 'react-redux'
 import Login from '../components/Login.component';
-import { login } from '../actions'
+import { login } from '../actions';
 
 const mapStateToProps = (state) => {
-	console.log("mapStateToProps",state);
   return {
 		status:state.login.status
   };

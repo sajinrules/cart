@@ -14,14 +14,12 @@ class Login extends React.Component {
 
 	handleChange(e){
     const { name, value } = e.target;
-		//debugger
     this.setState({ [name]: value });
   }
 
   login(event){
 	  event.preventDefault();
-		console.log("this.setState:",this.state);
-		//console.log("LoginAPI:",LoginAPI);
+		console.log("this.props:",this.props);
 	  this.props.onSubmit(this.state)
 	}
 	validateForm() {

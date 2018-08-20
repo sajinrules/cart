@@ -1,8 +1,6 @@
+
 import * as CONST from '../constants/login.constants';
 import LoginAPI from '../helpers/login.api';
-import { createBrowserHistory } from 'history';
-
-export const history = createBrowserHistory();
 
 export function setLoginStatus(status) {
   return {
@@ -24,7 +22,6 @@ export function login(credentials) {
       dispatch(setLoginStatus('success'));
       LoginAPI.setToken(response.token)
       dispatch(setLoginSuccess(response));
-      history.push('/men')
     }).catch(error => {
       dispatch(setLoginStatus('error'));
       throw(error);
