@@ -1,5 +1,8 @@
 import React from 'react';
 import { FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';
+import { createBrowserHistory } from 'history';
+
+export const history = createBrowserHistory();
 
 class Login extends React.Component {
 	constructor(props) {
@@ -8,6 +11,7 @@ class Login extends React.Component {
 		    username: '',
 		    password: ''
 		};
+		console.log("this.props:",this.props);
 		this.login = this.login.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -20,7 +24,13 @@ class Login extends React.Component {
   login(event){
 	  event.preventDefault();
 		console.log("this.props:",this.props);
-	  this.props.onSubmit(this.state)
+	  this.props.onSubmit(this.state).then(response => {
+			this.props.loginStatus(true)
+      this.props.history.push('/men');
+    }).catch(error => {
+			this.props.loginStatus(false)
+      throw(error);
+    });
 	}
 	validateForm() {
     // return this.state.usename.length > 0 && this.state.password.length > 0;

@@ -1,5 +1,5 @@
 export default {
   cats: [],
   hobbies: [],
-  session: !!sessionStorage.jwt
+  session: { status : !!sessionStorage.jwt}
 }

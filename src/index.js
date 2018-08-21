@@ -4,7 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk';
-import { createLogger } from 'redux-logger'
+import { logger } from 'redux-logger'
 import { createStore, applyMiddleware} from 'redux'
 import { BrowserRouter, Route } from 'react-router-dom';
 import reducers from './reducers'
@@ -22,10 +22,10 @@ import { Router } from 'react-router';
 export const history = createBrowserHistory();
 
 const $app = document.getElementById('app')
-const middleware = [ thunk ];
-if (process.env.NODE_ENV !== 'production') {
-  middleware.push(createLogger());
-}
+const middleware = [ thunk,logger];
+// if (process.env.NODE_ENV !== 'production') {
+//   middleware.push(createLogger());
+// }
 const store = createStore(reducers,applyMiddleware(...middleware)
 )
 //let store = createStore(reducers,applyMiddleware(thunk))

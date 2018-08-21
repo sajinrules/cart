@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Login from '../components/Login.component';
-import { login } from '../actions';
+import { login, setLoginStatus } from '../actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -10,7 +10,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onSubmit :(credentials) => dispatch(login(credentials))
+		onSubmit :(credentials) => dispatch(login(credentials)),
+    loginStatus:(status) => dispatch(setLoginStatus(status))
 	}
 }
 
