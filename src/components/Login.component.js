@@ -26,7 +26,7 @@ class Login extends React.Component {
 		console.log("this.props:",this.props);
 	  this.props.onSubmit(this.state).then(response => {
 			this.props.loginStatus({status:true, response:response})
-      this.props.history.push('/men');
+      this.props.history.push('/');
     }).catch(error => {
 			this.props.loginStatus(false)
       throw(error);

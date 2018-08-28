@@ -1,10 +1,10 @@
 import React from 'react'
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, ButtonGroup, Button } from 'react-bootstrap';
 import Logo from '../assets/logo.png';
 import Cart from '../assets/cart.svg';
 import Person from '../assets/person.svg';
 import { Link } from 'react-router-dom';
-import { ProfileComponent } from './Profile.component'
+import { ProfileComponent } from './Profile.component';
 
 export class HeaderBar extends React.Component {
 	render() {
@@ -39,7 +39,12 @@ export class HeaderBar extends React.Component {
 							</NavItem>
 						</Nav>
 					</Navbar.Collapse>
-					: ''}
+					:
+						<div className="login-register">
+							<Link to="login" className="login-link">Login</Link>
+							<a className="register-link" href="">Register</a>
+						</div>
+				}
 				</Navbar>
 			</div>
 		)

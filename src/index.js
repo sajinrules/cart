@@ -19,6 +19,7 @@ import './compiled/index.css';
 import { createBrowserHistory } from 'history';
 import { Router } from 'react-router';
 import { RequireAuth } from './helpers/auth'
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const history = createBrowserHistory();
 

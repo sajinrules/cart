@@ -8,16 +8,6 @@ export function setLoginStatus(data) {
   }
 }
 
-// export function setLoginSuccess(data) {
-//   return {
-//     type: CONST.SET_LOGIN_SUCCESS,
-//     data
-//   }
-// }
-// export function setStatus(status){
-//
-// }
-
 export function login(credentials) {
   return (dispatch) => {
     return LoginAPI.login(credentials)

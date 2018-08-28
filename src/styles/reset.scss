@@ -48,6 +48,18 @@ html, body {
   a.nav-link{
     color:$primary-color !important;
   }
+  .login-register{
+    display: inline-block;
+    float: right;
+    margin: 1.5rem 0;
+    a.login-link, a.register-link {
+      padding: 0 10px;
+      text-decoration: none;
+      font-size: 16px;
+      /* color: red !important; */
+      font-weight: 500;
+    }
+  }
 }
 .login {
   background: url('../assets/bg3.jpg');

@@ -14,16 +14,3 @@ export function setLoginSuccess(data) {
     data
   }
 }
-
-// export function login(credentials) {
-//   return (dispatch) => {
-//     return LoginAPI.login(credentials).then(response => {
-//       dispatch(setLoginStatus('success'));
-//       LoginAPI.setToken(response.token)
-//       dispatch(setLoginSuccess(response));
-//     }).catch(error => {
-//       dispatch(setLoginStatus('error'));
-//       throw(error);
-//     });
-//   };
-// }
