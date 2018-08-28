@@ -8,7 +8,7 @@ import { logger } from 'redux-logger'
 import { createStore, applyMiddleware} from 'redux'
 import { BrowserRouter, Route } from 'react-router-dom';
 import reducers from './reducers'
-import HeaderBar from './components/HeaderBar.component';
+import HeaderBarContainer from './containers/HeaderBarContainer';
 import LoginContainer from './containers/LoginContainer';
 import LandingComponent from './components/LandingComponent';
 import MensComponent from './components/MensComponent';
@@ -18,6 +18,7 @@ import Footer from './components/FooterComponent'
 import './compiled/index.css';
 import { createBrowserHistory } from 'history';
 import { Router } from 'react-router';
+import { RequireAuth } from './helpers/auth'
 
 export const history = createBrowserHistory();
 
@@ -33,12 +34,11 @@ const store = createStore(reducers,applyMiddleware(...middleware)
 ReactDOM.render(
   <Provider store={store}>
     <div>
-
 	    <Router history={history}>
         <div>
-          <HeaderBar {...this.props}/>
+          <HeaderBarContainer {...this.props}/>
           <Route exact path="/" component={LandingComponent} />
-          <Route exact path="/men" component={MensComponent} />
+          <Route exact path="/men" component={RequireAuth(MensComponent)} />
           <Route exact path="/women" component={WomensComponent} />
           <Route exact path="/kids" component={KidsComponent} />
           <Route path="/login" component={LoginContainer} />

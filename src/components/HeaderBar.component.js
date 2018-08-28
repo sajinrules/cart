@@ -17,6 +17,7 @@ export class HeaderBar extends React.Component {
 						</Navbar.Brand>
 						<Navbar.Toggle />
 					</Navbar.Header>
+					{this.props.session.status ?
 					<Navbar.Collapse>
 						<div>
 							<Nav>
@@ -38,6 +39,7 @@ export class HeaderBar extends React.Component {
 							</NavItem>
 						</Nav>
 					</Navbar.Collapse>
+					: ''}
 				</Navbar>
 			</div>
 		)

@@ -1,6 +1,6 @@
 class LoginAPI {
 
-  /* create dummy token */
+  /** fake backend call using Promise */
   static login(credentials) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -13,17 +13,30 @@ class LoginAPI {
     });
   }
 
-  /* create dummy token */
+  /** create dummy token */
   static createToken() {
     return Math.random().toString(36).slice(2)
   }
 
+  /** set session token */
   static setToken(token){
-    localStorage.setItem("token",token);
+    sessionStorage.setItem("token",token);
   }
 
+  /** get session token */
   static getToken(){
-    return localStorage.getItem("token");
+    return sessionStorage.getItem("token");
+  }
+
+  /** route authentication */
+  static requireAuth(nextState, replace) {
+    if (!this.getToken()) {
+      debugger;
+      replace({
+        pathname: '/login',
+        state: { nextPathname: nextState.location.pathname }
+      })
+    }
   }
 }
 export default LoginAPI;

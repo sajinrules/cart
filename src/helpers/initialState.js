@@ -1,5 +1,5 @@
 import LoginAPI from './login.api';
 
 export default {
-  session: !!LoginAPI.getToken()
+  session: {status: !!LoginAPI.getToken()}
 }

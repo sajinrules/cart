@@ -4,7 +4,7 @@ import { login, setLoginStatus } from '../actions';
 
 const mapStateToProps = (state) => {
   return {
-		status:state.login.status
+		session:state.sessionReducer
   };
 }
 
