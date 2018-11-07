@@ -179,3 +179,52 @@ html, body {
     width: auto !important;
   }
 }
+.relative {
+  position: relative;
+}
+// .absolute {
+//   position:absolute;
+// }
+.product {
+  position: relative;
+  display: inline-block;
+}
+.offer {
+  position: absolute;
+  background-color: #ef5777;
+  padding: 3px;
+  color: #fff;
+  right: 0;
+  top: 5px;
+}
+
+.product-image{
+  width: 200px;
+}
+
+.ratings {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  color: #b1b1b1;
+  overflow: hidden;
+}
+.full-stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fde16d;
+}
+.empty-stars:before, .full-stars:before {
+  content:"\2605\2605\2605\2605\2605";
+  font-size: 14pt;
+}
+.empty-stars:before {
+  -webkit-text-stroke: 1px #848484;
+}
+.full-stars:before {
+  -webkit-text-stroke: 1px orange;
+}
+/* Webkit-text-stroke is not supported on firefox or IE */
