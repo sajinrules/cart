@@ -1,6 +1,7 @@
 import React from 'react';
-
-
+import Img1 from '../assets/products/adult-beard-cap-1040945.jpg';
+import Product  from './ProductComponent';
+import { MENS_PRODUCTS } from '../constants/mens.products'
 
 class MensComponent extends React.Component {
   // constructor(props) {
@@ -14,26 +15,12 @@ class MensComponent extends React.Component {
     return (
       <div className="content container">
         <h3>Mens</h3>
-        <div>
-          <div className="product">
-            <span className="offer">-20%</span>
-            <img className="product-image" src="https://image.made-in-china.com/2f0j00dsfQOZLEZbzo/The-Wholesale-Mens-Dress-Shirts-Models-with-Mens-Casual-Shirts-Men-Wash-and-Wear.jpg" />
-          </div>
-          <div>
-            <div class="ratings">
-              <div class="empty-stars"></div>
-              <div class="full-stars" style={width}></div>
-            </div>
-            <div>Brand Name</div>
-            <div>
-              <span className="new-price">$16.00</span>
-              <span className="old-price">$20.00</span>
-            </div>
-          </div>
+        <div className="product-wrapper">
+          { MENS_PRODUCTS.map(product => {
+            return <Product />
+          })
+          }
           
-        </div>
-        <div>
-
         </div>
       </div>
 
