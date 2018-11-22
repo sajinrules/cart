@@ -15,9 +15,9 @@ class MensComponent extends React.Component {
     return (
       <div className="content container">
         <h3>Mens</h3>
-        <div className="product-wrapper">
-          { MENS_PRODUCTS.map(product => {
-            return <Product />
+        <div className="row product-wrapper">
+          { MENS_PRODUCTS.map((product, i) => {
+            return <Product key={i} product={product} />
           })
           }
           

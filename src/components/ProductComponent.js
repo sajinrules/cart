@@ -6,10 +6,15 @@ class Product extends React.Component {
     const width = {
       width: '80%'
     };
+    console.log("this.props:",this.props);
+    var bg = {
+      backgroundImage: 'url(' + this.props.product.image + ')'
+    }
     return (
-      <div className="product">
+      <div className="col-md-3 product">
         <div className="image">
           <span className="offer">-20%</span>
+          {/* <div className="image" style ={bg}></div> */}
           <img alt="product image" className="product-image" src={Img1} />
           <div className="overly">here</div>
         </div>
