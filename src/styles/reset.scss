@@ -183,6 +183,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   .product {
+    min-height: 430px;
     //padding-right: 2rem;
   }
   .image {
