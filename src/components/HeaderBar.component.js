@@ -1,10 +1,9 @@
 import React from 'react'
-import { Navbar, Nav, NavItem, ButtonGroup, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavItem} from 'react-bootstrap';
 import Logo from '../assets/logo.png';
-import Cart from '../assets/cart.svg';
-import Person from '../assets/person.svg';
 import { Link } from 'react-router-dom';
-import { ProfileComponent } from './Profile.component';
+import { CartComponent } from './Cart.component';
+import { ProfileComponent } from './ProfileComponent'
 
 export class HeaderBar extends React.Component {
 	render() {
@@ -32,11 +31,12 @@ export class HeaderBar extends React.Component {
 								</NavItem>
 							</Nav>
 						</div>
-						<Nav pullRight>
+						<Nav className="cart-profile" pullRight>
+              <NavItem eventKey={3} href="#">
+                <img height="20" alt="wishlist" src='../../icons/like.png'/>
+              </NavItem>
+							<CartComponent></CartComponent>
 							<ProfileComponent></ProfileComponent>
-							<NavItem eventKey={1} href="#">
-								<img alt="logo" src={Person}/>
-							</NavItem>
 						</Nav>
 					</Navbar.Collapse>
 					:

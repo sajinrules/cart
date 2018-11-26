@@ -1,5 +1,4 @@
 import React from 'react';
-import Img1 from '../assets/products/adult-beard-cap-1040945.jpg';
 import Product  from './ProductComponent';
 import { MENS_PRODUCTS } from '../constants/mens.products'
 

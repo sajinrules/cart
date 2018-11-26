@@ -1,8 +1,8 @@
 import React from 'react'
 import { Carousel, Grid, Row, Col, Image,Button } from 'react-bootstrap';
-import Img1 from '../assets/img1.jpg';
-import Img2 from '../assets/img2.jpg';
-import Img3 from '../assets/img3.jpg';
+import Img1 from '../assets/blur-blurred-background-boutique-1036856.jpg';
+import Img2 from '../assets/fashion-female-girls-896291.jpg';
+import Img3 from '../assets/adult-attractive-beautiful-1536619.jpg';
 import Cat1 from '../assets/cat1.jpg';
 import Cat2 from '../assets/cat2.jpg';
 import Cat3 from '../assets/cat3.jpg';
