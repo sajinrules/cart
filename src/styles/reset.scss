@@ -62,10 +62,11 @@ html, body {
   }
 }
 .login {
-  background: url('../assets/bg3.jpg');
+  background: url('../assets/bag-brand-business-167703.jpg');
   background-size: cover;
   background-position: 20px;
   height: calc(100vh - 224px);
+  //background-repeat: no-repeat;
   .content-wrapper {
     @extend .login-form-wrapper;
     .form{
@@ -107,6 +108,26 @@ html, body {
   }
 }
 .explore{
+  // .slide{
+  //   height: calc(100vh);
+  // }
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    //padding: 0 4px;
+    img {
+      padding: 4px;
+    }
+  }
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin: 0;
+  }
   .category{
     overflow: hidden;
     margin:10px 0;
@@ -138,6 +159,7 @@ html, body {
     .img-thumbnail{
       height: 450px;
       cursor: pointer;
+      border: none;
       // width: 270px;
       &:hover {
         // transform: scale(1.02);
@@ -160,11 +182,15 @@ html, body {
     margin: 0 auto;
   }
   .shop-for{
-    font-size: 30px;
-    font-weight:bold;
+    font-size: 50px;
+    font-weight: bold;
     text-align: center;
-    // margin-top: 50px;
-    margin-bottom: 20px;
+    margin: 70px 0;
+  }
+}
+.shop {
+  .container {
+    width: 80%;
   }
 }
 .footer {
