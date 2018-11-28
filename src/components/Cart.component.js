@@ -3,10 +3,6 @@ import { NavItem, Badge } from 'react-bootstrap';
 
 
 export class CartComponent extends React.Component {
-  constructor(props) {
-      super(props)
-  }
-
   render() {
     return (
       <div className="cart">

@@ -69,26 +69,26 @@ class LandingComponent extends React.Component {
         <h3 className="shop-for">PRODUCTS</h3>
         <div className="row">
           <div className="column">
-            <img src="../../images/column-1/background-bags-carry-346744.jpg" style={width} />
-            <img src="../../images/column-1/bags-business-commerce-1087727.jpg" style={width} />
+            <img alt="image1" src="../../images/column-1/background-bags-carry-346744.jpg" style={width} />
+            <img alt="image2" src="../../images/column-1/bags-business-commerce-1087727.jpg" style={width} />
             {/* <img src="../../images/column-1/black-friday-buying-casual-1068527.jpg" style={width} /> */}
-            <img src="../../images/column-1/pexels-photo-322207.jpeg" style={width} />
+            <img alt="image3" src="../../images/column-1/pexels-photo-322207.jpeg" style={width} />
             {/*<img src="../../images/column-1/commerce-crown-group-374894.jpg" style={width} />
             <img src="../../images/column-1/pexels-photo-1055691.jpeg" style={width} />
             {/*<img src="../../images/column-1/fashion-men-s-individuality-black-and-white-157675.jpeg" style={width} /> */}
           </div>
           <div className="column">
-            <img src="../../images/column-2/beautiful-eyewear-fashion-285171.jpg" style={width} />
-            <img src="../../images/column-2/holiday-trip-packaging-8434.jpg" style={width} />
-            <img src="../../images/column-2/pexels-photo-310419.jpeg" style={width} />
+            <img alt="image4" src="../../images/column-2/beautiful-eyewear-fashion-285171.jpg" style={width} />
+            <img alt="image5" src="../../images/column-2/holiday-trip-packaging-8434.jpg" style={width} />
+            <img alt="image6" src="../../images/column-2/pexels-photo-310419.jpeg" style={width} />
             {/* <img src="../../images/column-2/pexels-photo-852860.jpeg" style={width} />
             <img src="../../images/column-2/pexels-photo-972887.jpeg" style={width} />
             <img src="../../images/column-2/pexels-photo-972937.jpeg" style={width} />
             <img src="../../images/column-2/pexels-photo-1050244.jpeg" style={width} /> */}
           </div>
           <div className="column">
-            <img src="../../images/column-3/pexels-photo-264606.jpeg" style={width} />
-            <img src="../../images/column-3/pexels-photo-285172.jpeg" style={width} />
+            <img alt="image7" src="../../images/column-3/pexels-photo-264606.jpeg" style={width} />
+            <img alt="image8" src="../../images/column-3/pexels-photo-285172.jpeg" style={width} />
             {/* <img src="../../images/column-3/pexels-photo-1103063.jpeg" style={width} /> */}
             {/* <img src="../../images/pexels-photo-322207.jpeg" style={width} />
             <img src="../../images/commerce-crown-group-374894.jpg" style={width} />
@@ -96,9 +96,9 @@ class LandingComponent extends React.Component {
             <img src="../../images/fashion-men-s-individuality-black-and-white-157675.jpeg" style={width} /> */}
           </div>
           <div className="column">
-            <img src="../../images/column-4/pexels-photo-298864.jpeg" style={width} />
-            <img src="../../images/column-4/pexels-photo-432059.jpeg" style={width} />
-            <img src="../../images/column-4/pexels-photo-952212.jpeg" style={width} />
+            <img alt="image9" src="../../images/column-4/pexels-photo-298864.jpeg" style={width} />
+            <img alt="image10" src="../../images/column-4/pexels-photo-432059.jpeg" style={width} />
+            <img alt="image11" src="../../images/column-4/pexels-photo-952212.jpeg" style={width} />
             {/* <img src="../../images/pexels-photo-322207.jpeg" style={width} />
             <img src="../../images/commerce-crown-group-374894.jpg" style={width} />
             <img src="../../images/pexels-photo-1055691.jpeg" style={width} />

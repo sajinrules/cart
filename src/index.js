@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk';
 import { logger } from 'redux-logger'
 import { createStore, applyMiddleware} from 'redux'
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import reducers from './reducers'
 import HeaderBarContainer from './containers/HeaderBarContainer';
 import LoginContainer from './containers/LoginContainer';

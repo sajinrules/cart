@@ -9,7 +9,7 @@ const login = (state = initialState.session, action) => {
 	    return Object.assign({}, state, {
 	      status: action.data.status
 	    });
-      break;
+    
     default:
       return state;
   }

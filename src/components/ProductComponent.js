@@ -11,7 +11,7 @@ class Product extends React.Component {
   }
   
   handleEnter() {
-    this.setState({
+    this.setState({ 
       isHovered: true 
     });
   }
@@ -32,8 +32,7 @@ class Product extends React.Component {
       height: '322px',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      width: '213px'
+      backgroundRepeat: 'no-repeat'
     }
     return (
       <div className="col-md-3 product">
@@ -44,8 +43,8 @@ class Product extends React.Component {
           {
             this.state.isHovered ?(
               <div className="overly">
-                <img height="20" src="../../icons/heart.png" />
-                <img height="20" src="../../icons/like.png" />
+                <img alt="heart" height="20" src="../../icons/heart.png" />
+                <img alt="like" height="20" src="../../icons/like.png" />
                 <Button bsStyle="danger">ADD TO CART</Button>
               </div>
             ) :("")
@@ -57,7 +56,7 @@ class Product extends React.Component {
             <div className="empty-stars"></div>
             <div className="full-stars" style={width}></div>
           </div>
-          <div>{this.props.product.name}</div>
+          <div className="name">{this.props.product.name}</div>
           <div>
             <span className="new-price">$16.00</span>
             <span className="old-price">$20.00</span>

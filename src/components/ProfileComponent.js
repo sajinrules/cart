@@ -1,12 +1,8 @@
 import React from 'react';
-import { NavItem, Badge } from 'react-bootstrap';
+import { NavItem } from 'react-bootstrap';
 
 
 export class ProfileComponent extends React.Component {
-  constructor(props) {
-      super(props)
-  }
-
   render() {
     return (
       <div className="profile">
@@ -14,7 +10,6 @@ export class ProfileComponent extends React.Component {
           <img alt="profile" src='../../icons/man.png'/>
         </NavItem>
       </div>
-
     )
   }
 }

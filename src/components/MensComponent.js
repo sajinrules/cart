@@ -8,9 +8,9 @@ class MensComponent extends React.Component {
   // }
 
   render() {
-    const width = {
-      width: '80%'
-    };
+    // const width = {
+    //   width: '80%'
+    // };
     return (
       <div className="content container">
         <h3>Mens</h3>
