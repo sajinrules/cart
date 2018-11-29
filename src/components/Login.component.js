@@ -47,7 +47,7 @@ class Login extends React.Component {
 						<div className="flex-1 form">
 						<form onSubmit={this.login}>
 							<FormGroup controlId="usename" bsSize="large">
-								<ControlLabel>Usename</ControlLabel>
+								{/* <ControlLabel>Usename</ControlLabel> */}
 								<FormControl
 									autoFocus
 									name="username"
@@ -57,7 +57,7 @@ class Login extends React.Component {
 								/>
 							</FormGroup>
 							<FormGroup controlId="password" bsSize="large">
-								<ControlLabel>Password</ControlLabel>
+								{/* <ControlLabel>Password</ControlLabel> */}
 								<FormControl
 									autoFocus
 									name="password"

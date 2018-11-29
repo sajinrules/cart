@@ -1,4 +1,4 @@
-import React, { Component}  from 'react';
+import React  from 'react';
 import LoginAPI from '../helpers/login.api';
 
 const RequireAuth = (Component) => {
