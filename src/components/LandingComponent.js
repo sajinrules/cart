@@ -45,13 +45,14 @@ class LandingComponent extends React.Component {
           <Grid>
             <Row className="show-grid mx-0">
               <Col className="category px-0" sm={6} md={3}>
-                <Button onClick={() => this.navigate('/women') }>Women</Button>
+                <Button onClick={() => this.navigate('/men') }>Men</Button>
                 <Image src={Cat1} thumbnail />
               </Col>
               <Col className="category px-0" sm={6} md={3}>
-                <Button onClick={() => this.navigate('/men') }>Men</Button>
+                <Button onClick={() => this.navigate('/women') }>Women</Button>
                 <Image src={Cat2} thumbnail />
               </Col>
+              
               <Col className="category px-0" sm={6} md={3}>
                 <Button onClick={() => this.navigate('/kids') }>Kids</Button>
                 <Image src={Cat3} thumbnail />

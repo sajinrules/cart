@@ -1,16 +1,19 @@
 import { connect } from 'react-redux'
 import MensComponent from '../components/MensComponent';
+import { Products } from '../actions';
 
 
 const mapStateToProps = (state) => {
-  console.log("Mens:",state);
+  console.log("Mens:",state.product);
   return {
-		session:state.login
+		products:state
   };
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
+		getProducts :() => dispatch(Products()),
+    //loginStatus:(status) => dispatch(setLoginStatus(status))
 	}
 }
 

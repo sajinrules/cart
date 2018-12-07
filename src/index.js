@@ -11,7 +11,7 @@ import reducers from './reducers'
 import HeaderBarContainer from './containers/HeaderBarContainer';
 import LoginContainer from './containers/LoginContainer';
 import LandingComponent from './components/LandingComponent';
-import MensComponent from './components/MensComponent';
+import MensContainer from './containers/MensContainer';
 import WomensComponent from './components/WomensComponent';
 import KidsComponent from './components/KidsComponent';
 import Footer from './components/FooterComponent'
@@ -39,7 +39,7 @@ ReactDOM.render(
         <div>
           <HeaderBarContainer {...this.props}/>
           <Route exact path="/" component={LandingComponent} />
-          <Route exact path="/men" component={RequireAuth(MensComponent)} />
+          <Route exact path="/men" component={RequireAuth(MensContainer)} />
           <Route exact path="/women" component={WomensComponent} />
           <Route exact path="/kids" component={KidsComponent} />
           <Route path="/login" component={LoginContainer} />
