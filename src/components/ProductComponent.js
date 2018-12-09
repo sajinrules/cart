@@ -1,25 +1,24 @@
 import React from 'react';
-import {Button } from 'react-bootstrap';
+import Overly from '../containers/OverlyContainer'
 
 class Product extends React.Component {
   constructor(){
     super();
     this.state = {
-        isHovered: false
+      isHovered: false
     };
-    //this.handleHover = this.handleHover.bind(this);
   }
   
-  handleEnter() {
-    this.setState({ 
-      isHovered: true 
-    });
+  handleEnter = () => {
+    this.setState((prevState,props)=>{
+      return {isHovered:true};
+    })
   }
 
-  handleLeave() {
-    this.setState({
-      isHovered: false 
-    });
+  handleLeave = () => {
+    this.setState((prevState,props)=>{
+      return {isHovered:false};
+    })
   }
   
   render() {
@@ -33,19 +32,15 @@ class Product extends React.Component {
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }
+    const product = this.props.product;
     return (
       <div className="col-md-3 product">
-        <div className="image" onMouseEnter={this.handleEnter.bind(this)} onMouseLeave={this.handleLeave.bind(this)}>
+        <div className="image" onMouseEnter={this.handleEnter} onMouseLeave={this.handleLeave}>
           <span className="offer">-20%</span>
           <div className="product-image" style ={bg}></div>
-          {/* <img alt="product image" className="product-image" src={Img1} /> */}
           {
             this.state.isHovered ?(
-              <div className="overly">
-                <img alt="heart" height="20" src="../../icons/heart.png" />
-                <img alt="like" height="20" src="../../icons/like.png" />
-                <Button bsStyle="danger">ADD TO CART</Button>
-              </div>
+              <Overly product={product}></Overly>
             ) :("")
           }
           
