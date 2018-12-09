@@ -3,7 +3,6 @@ import HeaderBar from '../components/HeaderBar.component';
 
 
 const mapStateToProps = (state) => {
-  console.log("header:",state);
   return {
 		session:state.login
   };

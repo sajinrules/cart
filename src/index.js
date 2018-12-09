@@ -18,25 +18,24 @@ import Footer from './components/FooterComponent'
 import './compiled/index.css';
 import { createBrowserHistory } from 'history';
 import { Router } from 'react-router';
-import { RequireAuth } from './helpers/auth'
+import { RequireAuth } from './helpers/auth';
+import LoaderContainer from './containers/LoaderContainer';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const history = createBrowserHistory();
 
 const $app = document.getElementById('app')
 const middleware = [ thunk,logger];
-// if (process.env.NODE_ENV !== 'production') {
-//   middleware.push(createLogger());
-// }
+
 const store = createStore(reducers,applyMiddleware(...middleware)
 )
-//let store = createStore(reducers,applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
     <div>
 	    <Router history={history}>
         <div>
+          <LoaderContainer></LoaderContainer>
           <HeaderBarContainer {...this.props}/>
           <Route exact path="/" component={LandingComponent} />
           <Route exact path="/men" component={RequireAuth(MensContainer)} />

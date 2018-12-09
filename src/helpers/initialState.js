@@ -2,5 +2,6 @@ import LoginAPI from './login.api';
 
 export default {
   session: {status: !!LoginAPI.getToken()},
-  products:[]
+  products:[],
+  loader:{loader :false}
 }

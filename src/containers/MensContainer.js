@@ -4,16 +4,14 @@ import { Products } from '../actions';
 
 
 const mapStateToProps = (state) => {
-  console.log("Mens:",state.product);
   return {
-		products:state
+		products:state.product.product
   };
 }
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		getProducts :() => dispatch(Products()),
-    //loginStatus:(status) => dispatch(setLoginStatus(status))
+		getProducts :() => dispatch(Products())
 	}
 }
 

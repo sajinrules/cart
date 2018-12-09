@@ -26,7 +26,6 @@ class Product extends React.Component {
     const width = {
       width: '80%'
     };
-    //console.log("this.props:",this.props);
     var bg = {
       background: 'url(' + this.props.product.image + ')',
       height: '322px',

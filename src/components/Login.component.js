@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap';
+import { FormGroup, FormControl, Button} from 'react-bootstrap';
 import { createBrowserHistory } from 'history';
 
 export const history = createBrowserHistory();
@@ -11,7 +11,6 @@ class Login extends React.Component {
 		    username: '',
 		    password: ''
 		};
-		console.log("this.props:",this.props);
 		this.login = this.login.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -23,7 +22,6 @@ class Login extends React.Component {
 
   login(event){
 	  event.preventDefault();
-		console.log("this.props:",this.props);
 	  this.props.onSubmit(this.state).then(response => {
 			this.props.loginStatus({status:true, response:response})
       this.props.history.push('/');
