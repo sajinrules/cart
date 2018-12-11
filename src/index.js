@@ -16,19 +16,15 @@ import WomensComponent from './components/WomensComponent';
 import KidsComponent from './components/KidsComponent';
 import Footer from './components/FooterComponent'
 import './compiled/index.css';
-import { createBrowserHistory } from 'history';
 import { Router } from 'react-router';
 import { RequireAuth } from './helpers/auth';
 import LoaderContainer from './containers/LoaderContainer';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-
-export const history = createBrowserHistory();
+import history from './helpers/history'
 
 const $app = document.getElementById('app')
 const middleware = [ thunk,logger];
 
-const store = createStore(reducers,applyMiddleware(...middleware)
-)
+const store = createStore(reducers,applyMiddleware(...middleware))
 
 ReactDOM.render(
   <Provider store={store}>

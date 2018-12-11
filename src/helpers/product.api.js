@@ -7,7 +7,7 @@ class ProductAPI {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve({status:200, data:MENS_PRODUCTS, message:"Product fetched successfully"});
-      }, 2000)
+      }, 1000)
     });
   }
 }

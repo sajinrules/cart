@@ -22,13 +22,7 @@ class Login extends React.Component {
 
   login(event){
 	  event.preventDefault();
-	  this.props.onSubmit(this.state).then(response => {
-			this.props.loginStatus({status:true, response:response})
-      this.props.history.push('/');
-    }).catch(error => {
-			this.props.loginStatus(false)
-      throw(error);
-    });
+	  this.props.onSubmit(this.state)
 	}
 	validateForm() {
     // return this.state.usename.length > 0 && this.state.password.length > 0;

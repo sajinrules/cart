@@ -6,10 +6,10 @@ export function Products() {
     dispatch(showLoading(true));
     ProductAPI.get().then(res => {
       dispatch(getProductsSuccess(res.data));
-      dispatch(hideLoading(false));
+      dispatch(showLoading(false));
     }, error =>{
       dispatch(getProductsFailure(error))
-      dispatch(hideLoading(false));
+      dispatch(showLoading(false));
     })
   };
 }
@@ -24,12 +24,7 @@ const getProductsFailure = error => ({
   error
 });
 
-const showLoading = data => ({
+export const showLoading = data => ({
   type: CONST.SHOW_LOADING,
-  data
-});
-
-const hideLoading = data => ({
-  type: CONST.HIDE_LOADING,
   data
 });

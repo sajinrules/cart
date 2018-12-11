@@ -9,7 +9,7 @@ class LoginAPI {
           resolve({status:200,username:credentials.username,message:"",token:this.createToken()});
         else
           reject({status:400,username:undefined,message:"Username and password mismatch !"});
-      }, 2000)
+      }, 1000)
     });
   }
 
