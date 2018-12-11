@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav, NavItem} from 'react-bootstrap';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
-import { CartComponent } from './Cart.component';
+import CartContainer  from '../containers/CartContainer';
 import { ProfileComponent } from './ProfileComponent'
 
 export class HeaderBar extends React.Component {
@@ -35,7 +35,7 @@ export class HeaderBar extends React.Component {
               <NavItem eventKey={3} href="#">
                 <img height="20" alt="wishlist" src='../../icons/like.png'/>
               </NavItem>
-							<CartComponent></CartComponent>
+							<CartContainer></CartContainer>
 							<ProfileComponent></ProfileComponent>
 						</Nav>
 					</Navbar.Collapse>
